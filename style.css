@@ -22,7 +22,7 @@ body{
     color: #d36c6c;
     font-size: 26px;
     font-family: sans-serif;
-    display: flex; /*In this case, just puts elements in row*/
+    display: flex; 
     justify-content: space-between; 
 }
 
