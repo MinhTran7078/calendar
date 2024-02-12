@@ -1,0 +1,291 @@
+#websiteTitle{
+    position: absolute; 
+    top: 10px;
+    width: 770px;
+    padding: 5px;
+    text-align: center; 
+    font-size: 20px; 
+    font-family: 'Times New Roman', Times, serif; 
+    background-color:#58bae4;
+    color: white; 
+}
+
+body{
+    display: flex; 
+    margin-top: 50px; 
+    justify-content: center;
+    background-color: #FFFCFF;
+}
+
+#header{
+    padding: 10px; 
+    color: #d36c6c;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex; /*In this case, just puts elements in row*/
+    justify-content: space-between; 
+}
+
+#container{
+    width: 770px;
+}
+
+#calendar{
+    width: 100%;
+    margin: auto; 
+    display: flex; 
+    flex-wrap: wrap; 
+}
+
+#weekdays{
+    width: 100%;
+    display: flex; 
+    color: #247BA0; 
+}
+
+#weekdays div{
+    width: 100px; 
+    padding: 10px; 
+}
+
+.day{
+    width: 100px; 
+    padding: 10px; 
+    height: 100px; 
+    cursor: pointer; 
+    box-sizing: border-box; 
+    background-color: white; 
+    box-shadow: 0px 0px 3px #cbd4c2; 
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    position: relative; 
+}
+
+.dayOfMonthIndicator{
+    display: inline-block; 
+    width:18px;
+    border-radius: 3px;
+}
+
+.eventsHolder{
+    display: flex; 
+    flex-direction: column; 
+    gap: 2px;
+    margin-top: 5px;
+    overflow: auto; 
+}
+
+#eventStatusContainer{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.event{
+    font-size: 10px; 
+    padding: 3px; 
+    background-color: #58bae4;
+    color: white;
+    border-radius: 5px;
+}
+
+.urgentEvent{
+    background-color: #ff3232 !important;
+}
+
+.importantEvent{
+    background-color: #f1ed00;
+}
+
+.eventDescriptor{
+    display: none; 
+    font-family: sans-serif;
+    font-size: 10px; 
+    position: absolute;
+    z-index: 20; 
+    top: 33px;
+    left: 100px; 
+    background-color: #9ad4ec;
+    border-radius: 5px; 
+    padding: 3px; 
+    color: white; 
+    min-width: 100px;
+    max-width: 150px;  
+}
+
+.day:hover{
+    background-color: #e8faed; 
+}
+
+.day.selectedDay{
+    background-color: #e8faed; 
+}
+
+button {
+    width: 75px; 
+    cursor: pointer;
+    box-shadow: 0px 0px 2px gray; 
+    border: none; 
+    outline: none; 
+    padding: 5px;
+    border-radius: 5px; 
+    color: white; 
+}
+
+#eventsButton{
+    background-color: #58bae4;
+}
+
+#addButton{
+    background-color: rgba(58, 186, 15, 0.701); 
+}
+
+#removeButton{
+    background-color: #d36c6c;
+}
+
+.navButton{
+    background-color: #92a1d1; 
+}
+
+#saveButton, #closeButton{
+    background-color: #92a1d1;
+}
+
+#cancelButton, #deleteButton{
+    background-color: #d36c6c; 
+}
+
+#eventsSummary, #newEventModal, #deleteEventModal{
+    display: None; 
+    z-index: 20; 
+    padding: 25px; 
+    background-color: #e8f4fa; 
+    box-shadow: 0px 0px 3px black; 
+    border-radius: 5px; 
+    width: 350px; 
+    top: 100px; 
+    left: calc(50% - 175); 
+    position: absolute; 
+    font-family: sans-serif; 
+}
+
+#eventsSummaryContainer{
+    display: flex;
+    width: 350px;
+    max-height: 500px; 
+    overflow-x: hidden;
+    overflow-y: scroll;
+    flex-direction: column;
+}
+
+.eventSummary{
+    margin-bottom: 1em;
+}
+
+#eventText{
+    font-size: 14px; 
+}
+
+#eventTitleInput.error{
+    border: 2px solid red; 
+}
+
+#eventTitleInput{
+    padding: 10px; 
+    width: 100%; 
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px; 
+    outline: none; 
+    border: none; 
+    box-shadow: 0px 0px 3px gray; 
+}
+
+#eventDescription{
+    width: 100%; 
+    height: 100px; 
+    font-family: sans-serif; 
+    overflow-y: scroll;
+    scrollbar-width: auto; 
+    border: none; 
+    padding: 10px; 
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border-radius: 3px; 
+    outline: none; 
+    box-shadow: 0px 0px 3px gray; 
+}
+
+.eventStatus{
+    font-family: sans-serif; 
+    font-size: 15px;
+    color: white;
+    border-radius: 3px;
+}
+
+label[for=urgentDescriptor]{
+    background-color: #ff3232; 
+}
+
+label[for=importantDescriptor]{
+    background-color: #fbf84a; 
+}
+
+label[for=normalDescriptor]{
+    background-color: #58bae4; 
+}
+
+#deleteModalContainer{
+    display: flex; 
+    flex-direction: column; 
+    max-height: 350px;
+    overflow-y: scroll;
+}
+
+#deleteModalContainer label{
+    margin-bottom: 1em; 
+}
+
+.deleteCheckBox{
+    align-self: start;
+    vertical-align: middle;
+    display: inline;
+}
+
+.deleteEventList{
+    margin-bottom: 1em;
+}
+
+#modalBackDrop{
+    display: none; 
+    top: 0px; 
+    left: 0px; 
+    z-index: 10; 
+    width: 100vw; 
+    height: 100vh; 
+    position: absolute; 
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+.padding{
+    cursor: default !important; 
+    background-color: #FFFCFF !important; 
+    box-shadow: none !important; 
+}
+
+::-webkit-scrollbar{
+    width: 3px; 
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px rgb(185, 184, 184); 
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgb(182, 181, 181); 
+    border-radius: 10px;
+}
+

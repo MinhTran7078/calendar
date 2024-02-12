@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="websiteTitle">Task Planner</header>
+    <div id="container">
+        <div id="header">
+            <div id="monthDisplay"></div>
+            <div>
+                <button id="eventsButton" class="contentButton">Events</button>
+                <button id="addButton" class="contentButton">Add</button>
+                <button id="removeButton" class="contentButton">Delete</button>
+                <button id="backButton" class="navButton">Back</button>
+                <button id="nextButton" class="navButton">Next</button>
+            </div>
+        </div>
+
+        <div id="weekdays">
+            <div>Sunday</div>
+            <div>Monday</div>
+            <div>Tuesday</div>
+            <div>Wednesday</div>
+            <div>Thursday</div>
+            <div>Friday</div>
+            <div>Saturday</div>
+        </div>
+
+        <div id="calendar"></div>
+    </div>
+
+    <div id="eventsSummary">
+        <h2>Events Summary</h2>
+        <div id="eventsSummaryContainer"></div>
+    </div>
+
+    <div id="newEventModal">
+        <h2>New Event</h2>
+
+        <input id="eventTitleInput" placeHolder="Event Title" />
+        <textarea id="eventDescription" placeholder="Event Description (Optional)"></textarea>
+
+        <div id="eventStatusContainer">
+            <input type="radio" id="urgentDescriptor" name="eventStatus" value="urgent"/>
+            <label for="urgentDescriptor" class="eventStatus">URGENT</label>
+
+            <input type="radio" id="importantDescriptor" name="eventStatus" value="important"/>
+            <label for="importantDescriptor" class="eventStatus">IMPORTANT</label>
+
+            <input type="radio" id="normalDescriptor" name="eventStatus" value="normal"/>
+            <label for="normalDescriptor" class="eventStatus">NORMAL</label>
+        </div>
+
+        <button id="saveButton">Save</button>
+        <button id="cancelButton">Cancel</button>
+    </div>
+
+    <div id="deleteEventModal">
+        <h2>Today's Events</h2>
+
+        <div id="deleteModalContainer"></div>
+
+        <button id="deleteButton">Delete</button>
+        <button id="closeButton">Close</button>
+    </div>
+
+    <div id="modalBackDrop"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
