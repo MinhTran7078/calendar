@@ -287,33 +287,4 @@ function initButtons(){
 initButtons();
 load(); 
 
-/*events.sort(function(event1, event2) {
-    date1Elements = event1.date.split("/");
-    date2Elements = event2.date.split("/");
-    
-    difYear = Number(date1Elements[2]) - Number(date2Elements[2]);
-    difMonth = Number(date1Elements[1]) - Number(date2Elements[1]);
-    difDay = Number(date1Elements[0]) - Number(date2Elements[0]); 
-
-    if(difYear > 0){
-        return 1;
-    } else if (difYear < 0){
-        return -1; 
-    }
-
-    if(difMonth > 0){
-        return 1;  
-    } else if (difMonth < 0){
-        return -1;  
-    }
-
-    if(difDay > 0){
-        return 1; 
-    } else if (difDay < 0){
-        return -1; 
-    }
-
-    return 0; 
-});*/
-
 
